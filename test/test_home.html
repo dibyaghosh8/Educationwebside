@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Quizzes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+   * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fc;
+  color: #333;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav img {
+  width: 100px;
+  border-radius: 8px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00ff88;
+}
+
+nav input {
+  height: 30px;
+  width: 220px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 36px;
+  margin-right: 20px;
+}
+
+.nav-icons a {
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-icons a:hover {
+  color: #00ff88;
+}
+
+#hero {
+  background: #d5ffce;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.nav-btn {
+  padding: 6px 16px;
+  background-color: #0a2e57;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background-color: #00cc66;
+}
+
+h1 {
+  text-align: center;
+  margin: 40px 10px 20px;
+  font-size: 32px;
+  color: #0a2e57;
+}
+
+.btn1 {
+  display: block;
+  margin: 10px auto 40px;
+  padding: 15px 30px;
+  background-color: #00cc66;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn1:hover {
+  background-color: #00994d;
+}
+
+h3, p {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  font-size: 16px;
+}
+
+#cor1 {
+  background-color: #ffffff;
+  padding: 40px 5%;
+}
+
+#cor1 h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #0a2e57;
+  margin-bottom: 30px;
+}
+
+.cor-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.pro {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.pro:hover {
+  transform: translateY(-6px);
+}
+
+.des {
+  padding: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #0a2e57;
+}
+
+.des span {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.st-btn {
+  background-color: #0a2e57;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.st-btn:hover {
+  background-color: #00cc66;
+}
+
+section.courses {
+  background-color: #f1f5f9;
+  padding: 60px 5%;
+}
+
+.courses h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #0a2e57;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.course-card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.course-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #0a2e57;
+}
+
+.course-card p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.course-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.course-actions a {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.view-btn {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.view-btn:hover {
+  background-color: #ccc;
+}
+
+.start-btn {
+  background-color: #0a2e57;
+  color: #fff;
+}
+
+.start-btn:hover {
+  background-color: #00cc66;
+}
+
+.viewmore {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.viwemore-btn {
+  background-color: #0a2e57;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.viwemore-btn:hover {
+  background-color: #00cc66;
+}
+
+footer {
+  background: #0a2e57;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 15px;
+  margin-top: 40px;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <img src="logo.jpg" alt="Logo" />
+    <ul>
+      <li><a href="test_home.html">Home</a></li>
+      <li><a href="test_pay_cor.html">Courses</a></li>
+      <li><a href="test_cer.html">Certificates</a></li>
+      <li><a href="exam.html">Exams</a></li>
+    </ul>
+    <input type="text" placeholder="Search" />
+    <div class="nav-icons">
+      <a href="setting.html"><i class="fa-solid fa-gear"></i></a>
+      <a href="account_database.html"><i class="fa-solid fa-user"></i></a>
+
+
+    </div>
+  </nav>
+
+  <section id="hero">
+    <p>Please verify your email address to access all features on Learn Online</p>
+    <button class="nav-btn">Send Again</button>
+  </section>
+
+  <h1>Practice with Online Quizzes</h1>
+  <button class="btn1">Sharpen Your Skills with Interactive Quizzes</button>
+
+  <h3>📚 What’s Inside the Quiz?</h3>
+  <p>Each quiz is designed to test your knowledge on specific topics. You’ll face 25 to 40 multiple-choice questions in
+    each quiz.</p>
+
+  <p>📝 For every correct answer, you earn 1 point. At the end of each quiz, you’ll receive a detailed score summary
+    with feedback.</p>
+
+  <p>🎯 Quizzes are available for HTML, CSS, JavaScript, Python, and many more topics. Whether you're a beginner or
+    advanced learner — there's something for everyone.</p>
+
+  <section id="cor1">
+    <h2>Top Courses</h2>
+    <div class="cor-container">
+      <div class="pro">
+        <div class="des cos1"><span>HTML</span>
+          <h5>Beginner Quiz</h5><button class="st-btn">Start</button>
+        </div>
+      </div>
+      <div class="pro">
+        <div class="des cos2"><span>CSS</span>
+          <h5>Intermediate Quiz</h5><button class="st-btn">Start</button>
+        </div>
+      </div>
+      <div class="pro">
+        <div class="des cos3"><span>JavaScript</span>
+          <h5>Logic Basics</h5><button class="st-btn">Start</button>
+        </div>
+      </div>
+      <div class="pro">
+        <div class="des cos4"><span>Python</span>
+          <h5>Intro Quiz</h5><button class="st-btn">Start</button>
+        </div>
+      </div>
+      <div class="pro">
+        <div class="des cos5"><span>Java</span>
+          <h5>Core Concepts</h5><button class="st-btn">Start</button>
+        </div>
+      </div>
+      <div class="pro">
+        <div class="des cos6"><span>C++</span>
+          <h5>Quiz Level 1</h5><button class="st-btn">Start</button>
+        </div>
+      </div>
+      <div class="pro">
+        <div class="des cos7"><span>SQL</span>
+          <h5>Database Basics</h5><button class="st-btn">Start</button>
+        </div>
+      </div>
+      <div class="pro">
+        <div class="des cos8"><span>Networking</span>
+          <h5>MCQ Test</h5><button class="st-btn">Start</button>
+        </div>
+      </div>
+      <div class="pro">
+        <div class="des cos9"><span>OS</span>
+          <h5>System Basics</h5><button class="st-btn">Start</button>
+        </div>
+      </div>
+      <div class="pro">
+        <div class="des cos10"><span>Aptitude</span>
+          <h5>Logical Test</h5><button class="st-btn">Start</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="courses">
+    <h2>Top Courses</h2>
+    <div class="course-grid">
+
+      <div class="course-card">
+        <h3>HTML & CSS</h3>
+        <p>4.5 ⭐ | 12K students | 5 Hrs</p>
+        <p>Completion Certificate</p>
+        <div class="course-actions">
+          <a href="#" class="view-btn">VIEW</a>
+          <a href="#" class="start-btn">START</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <h3>JavaScript Essentials</h3>
+        <p>4.6 ⭐ | 10K students | 6 Hrs</p>
+        <p>Completion Certificate</p>
+        <div class="course-actions">
+          <a href="#" class="view-btn">VIEW</a>
+          <a href="#" class="start-btn">START</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <h3>Python for Beginners</h3>
+        <p>4.7 ⭐ | 18K students | 8 Hrs</p>
+        <p>Completion Certificate</p>
+        <div class="course-actions">
+          <a href="#" class="view-btn">VIEW</a>
+          <a href="#" class="start-btn">START</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <h3>JavaScript Essentials</h3>
+        <p>4.6 ⭐ | 10K students | 6 Hrs</p>
+        <p>Completion Certificate</p>
+        <div class="course-actions">
+          <a href="#" class="view-btn">VIEW</a>
+          <a href="#" class="start-btn">START</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <h3>Python for Beginners</h3>
+        <p>4.7 ⭐ | 18K students | 8 Hrs</p>
+        <p>Completion Certificate</p>
+        <div class="course-actions">
+          <a href="#" class="view-btn">VIEW</a>
+          <a href="#" class="start-btn">START</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <h3>JavaScript Essentials</h3>
+        <p>4.6 ⭐ | 10K students | 6 Hrs</p>
+        <p>Completion Certificate</p>
+        <div class="course-actions">
+          <a href="#" class="view-btn">VIEW</a>
+          <a href="#" class="start-btn">START</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <h3>Python for Beginners</h3>
+        <p>4.7 ⭐ | 18K students | 8 Hrs</p>
+        <p>Completion Certificate</p>
+        <div class="course-actions">
+          <a href="#" class="view-btn">VIEW</a>
+          <a href="#" class="start-btn">START</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <h3>JavaScript Essentials</h3>
+        <p>4.6 ⭐ | 10K students | 6 Hrs</p>
+        <p>Completion Certificate</p>
+        <div class="course-actions">
+          <a href="#" class="view-btn">VIEW</a>
+          <a href="#" class="start-btn">START</a>
+        </div>
+      </div>
+    </div>
+    <div class="viewmore">
+      <button class="viwemore-btn">VIEW MORE</button>
+    </div>
+  </section>
+  <footer>
+    &copy; 2025 Learn Online. All Rights Reserved.
+  </footer>
+</body>
+
+</html>

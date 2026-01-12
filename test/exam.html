@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Cards Layout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Header styles */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgb(59, 59, 59);
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav img {
+      width: 115px;
+      border-radius: 8px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      text-transform: capitalize;
+      gap: 80px;
+    }
+
+    nav ul li a:hover {
+      color: green;
+    }
+
+    nav input {
+      height: 28px;
+      width: 250px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-icons a {
+      color: white;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .nav-icons a:hover {
+      color: green;
+    }
+
+    #main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 10px;
+    }
+
+    .cards {
+      width: 200px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .cards:hover {
+      transform: scale(1.05);
+    }
+
+    .img img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .title {
+      text-align: center;
+      padding: 10px;
+      background-color: #eee;
+    }
+
+    .des {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .des p {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .des button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .des button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #7979b8;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <nav>
+    <img src="logo.jpg" alt="Logo">
+    <ul>
+      <li><a href="test_home.html">Home</a></li>
+      <li><a href="test_pay_cor.html">Courses</a></li>
+      <li><a href="test_cer.html">Certificates</a></li>
+      <li><a href="exam.html">Exams</a></li>
+    </ul>
+    <input type="text" placeholder="Search">
+    <div class="nav-icons">
+      <a href="setting.html"><i class="fa-solid fa-gear"></i></a>
+      <a href="account_database.html"><i class="fa-solid fa-user"></i></a>
+
+
+
+    </div>
+  </nav>
+
+  <section id="main">
+    <div class="cards">
+      <div class="img">
+        <img src="ai1.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Artificial Intelligence</h2>
+      </div>
+      <div class="des">
+        <p>Learn AI fundamentals and build smart systems using Python.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="c.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>C Programming</h2>
+      </div>
+      <div class="des">
+        <p>Learn the basics of C language with real-world examples and exercises.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="c++1.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>C++ Programming</h2>
+      </div>
+      <div class="des">
+        <p>Master object-oriented programming with C++ through practical projects.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="coding_dev.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Web Development</h2>
+      </div>
+      <div class="des">
+        <p>Explore frontend and backend web development using HTML, CSS, and JavaScript.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="html1.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>HTML & CSS</h2>
+      </div>
+      <div class="des">
+        <p>Build beautiful websites using HTML for structure and CSS for design.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="data_analytics.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Data Analytics</h2>
+      </div>
+      <div class="des">
+        <p>Analyze and interpret complex data to help make business decisions.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="software_eng.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Software Engineering</h2>
+      </div>
+      <div class="des">
+        <p>Learn the process of designing and building software systems.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="data_manament.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Data Management</h2>
+      </div>
+      <div class="des">
+        <p>Understand how to organize and maintain data efficiently.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="css.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>CSS Styling</h2>
+      </div>
+      <div class="des">
+        <p>Master the art of styling web pages with CSS.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="dbms.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Database Management</h2>
+      </div>
+      <div class="des">
+        <p>Explore how databases work and how to manage them.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="java1.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Java Programming</h2>
+      </div>
+      <div class="des">
+        <p>Build applications using Java, an object-oriented language.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="python1.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Python Programming</h2>
+      </div>
+      <div class="des">
+        <p>Learn Python, one of the most beginner-friendly languages.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="js2.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>JavaScript Basics</h2>
+      </div>
+      <div class="des">
+        <p>Learn the fundamentals of JavaScript for web development.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="ai3.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Artificial Intelligence</h2>
+      </div>
+      <div class="des">
+        <p>Discover the power of AI and how it's shaping the future.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="ui_ux1.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>UI/UX Design</h2>
+      </div>
+      <div class="des">
+        <p>Understand the principles of designing user-friendly interfaces.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="js.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Advanced JavaScript</h2>
+      </div>
+      <div class="des">
+        <p>Dive deeper into JavaScript with advanced concepts and projects.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="mso1.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>MS Office Tools</h2>
+      </div>
+      <div class="des">
+        <p>Master Word, Excel, PowerPoint, and more with practical tips.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="nodejs.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Node.js Essentials</h2>
+      </div>
+      <div class="des">
+        <p>Learn server-side programming with JavaScript using Node.js.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="php.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>PHP for Web Development</h2>
+      </div>
+      <div class="des">
+        <p>Build dynamic websites and web apps using PHP scripting.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="python2.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Python Programming</h2>
+      </div>
+      <div class="des">
+        <p>Start coding with one of the most versatile languages — Python.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="webdesign.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Web Design Basics</h2>
+      </div>
+      <div class="des">
+        <p>Learn HTML, CSS, and layout skills for building websites.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="reactjs1.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>React.js Fundamentals</h2>
+      </div>
+      <div class="des">
+        <p>Build dynamic frontend applications using React library.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="nextjs.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Next.js Framework</h2>
+      </div>
+      <div class="des">
+        <p>Develop fast and SEO-friendly React apps with Next.js.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="java2.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Java Programming</h2>
+      </div>
+      <div class="des">
+        <p>Master Java for backend, Android, and enterprise development.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="ai2.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Artificial Intelligence</h2>
+      </div>
+      <div class="des">
+        <p>Explore machine learning, neural networks, and smart systems.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="html2.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>HTML Complete Guide</h2>
+      </div>
+      <div class="des">
+        <p>Start web development with structured content using HTML5.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="hacking.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Ethical Hacking</h2>
+      </div>
+      <div class="des">
+        <p>Understand vulnerabilities and secure systems ethically.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="c++2.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>C++ Programming</h2>
+      </div>
+      <div class="des">
+        <p>Explore object-oriented programming and system-level logic with C++.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="c.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>C Programming Basics</h2>
+      </div>
+      <div class="des">
+        <p>Get started with structured programming using C language.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="ai4.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>AI Concepts</h2>
+      </div>
+      <div class="des">
+        <p>Dive into intelligent systems, neural networks, and ML basics.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="python5.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Advanced Python</h2>
+      </div>
+      <div class="des">
+        <p>Enhance your Python skills with advanced topics and real-world use.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="js2.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>JavaScript Essentials</h2>
+      </div>
+      <div class="des">
+        <p>Learn the fundamentals of JavaScript for web interaction.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="reactjs2.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>React.js Guide</h2>
+      </div>
+      <div class="des">
+        <p>Build fast and dynamic user interfaces with React components.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="ui_ux2.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>UI/UX Design</h2>
+      </div>
+      <div class="des">
+        <p>Design beautiful and user-friendly digital interfaces.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="java4.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Java for Developers</h2>
+      </div>
+      <div class="des">
+        <p>Learn Java from basics to building scalable applications.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="html_css.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>HTML & CSS</h2>
+      </div>
+      <div class="des">
+        <p>Create structured and styled web pages with HTML and CSS.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="css.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>CSS Styling</h2>
+      </div>
+      <div class="des">
+        <p>Master responsive and attractive styling using CSS.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="mso2.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Microsoft Office</h2>
+      </div>
+      <div class="des">
+        <p>Learn Word, Excel, and PowerPoint for productivity.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="ai2.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>AI in Practice</h2>
+      </div>
+      <div class="des">
+        <p>Explore real-world applications of artificial intelligence.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="c++1.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>C++ Programming</h2>
+      </div>
+      <div class="des">
+        <p>Strengthen your OOP concepts with C++ language.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="nextjs2.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Next.js Advanced</h2>
+      </div>
+      <div class="des">
+        <p>Level up your React skills with the Next.js framework.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="img">
+        <img src="python4.jpg" alt="Book Image" />
+      </div>
+      <div class="title">
+        <h2>Python Projects</h2>
+      </div>
+      <div class="des">
+        <p>Build practical projects to apply your Python knowledge.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Learn Online. All Rights Reserved.
+  </footer>
+</body>
+
+</html>
