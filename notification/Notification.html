@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notifications</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f4f8;
+    }
+
+    .close-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 22px;
+      color: #333;
+      background-color: #fff;
+      padding: 10px 12px;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 80px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+
+    .header h2 {
+      font-size: 22px;
+      margin: 0;
+      color: #111;
+    }
+
+    .unread-count {
+      background-color: #d90429;
+      color: #fff;
+      font-size: 13px;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-left: 6px;
+    }
+
+    .mark-read {
+      font-size: 14px;
+      color: #0077b6;
+      cursor: pointer;
+      background-color: #eef6fb;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    .mark-read:hover {
+      background-color: #d7ecf8;
+    }
+
+    .notification {
+      display: flex;
+      gap: 16px;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      background-color: #ffffff;
+      border: 1px solid #eee;
+      transition: background 0.3s ease;
+    }
+
+    .notification.unread {
+      background-color: #eaf4fb;
+    }
+
+    .notification:hover {
+      background-color: #f6faff;
+    }
+
+    .notification img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .content {
+      flex: 1;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .content p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .name {
+      font-weight: bold;
+      color: #000;
+    }
+
+    .link {
+      color: #0077b6;
+      font-weight: 500;
+      margin-left: 3px;
+    }
+
+    .dot {
+      height: 8px;
+      width: 8px;
+      background-color: red;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: 6px;
+    }
+
+    .time {
+      font-size: 13px;
+      color: #666;
+      margin-top: 6px;
+    }
+
+    .message-box {
+      background-color: #f4f4f4;
+      padding: 12px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="file:///C:/Users/Dibya/Desktop/webside/home.html" class="close-btn"><i class="fa-solid fa-arrow-left"></i></a>
+
+  <div class="container">
+    <div class="header">
+      <h2>Notifications <span class="unread-count">3</span></h2>
+      <div class="mark-read">Mark all as read</div>
+    </div>
+
+    <div class="notification unread">
+      <img src="man1.jpg" alt="User">
+      <div class="content">
+        <p><span class="name">Mark Webber</span> reacted to your post <span class="link">Learning Python
+            Basics</span><span class="dot"></span></p>
+        <div class="time">1m ago</div>
+      </div>
+    </div>
+
+    <div class="notification unread">
+      <img src="woman3.jpg" alt="User">
+      <div class="content">
+        <p><span class="name">Angela Gray</span> started following your GitHub<span class="dot"></span></p>
+        <div class="time">5m ago</div>
+      </div>
+    </div>
+
+    <div class="notification unread">
+      <img src="man3.jpg" alt="User">
+      <div class="content">
+        <p><span class="name">Jacob Thompson</span> joined your group <span class="link">Frontend Developers</span><span
+            class="dot"></span></p>
+        <div class="time">1 day ago</div>
+      </div>
+    </div>
+
+    <div class="notification">
+      <img src="man4.jpg" alt="User">
+      <div class="content">
+        <p><span class="name">Rizky Hasanuda</span> sent you a private message</p>
+        <div class="time">5 days ago</div>
+        <div class="message-box">
+          Hey! I saw your JavaScript project on CodePen. Can you help me understand how the fetch API works with
+          async/await?
+        </div>
+      </div>
+    </div>
+
+    <div class="notification">
+      <img src="woman1.jpg" alt="User">
+      <div class="content">
+        <p><span class="name">Kimberly Smita</span> commented on your HTML template design</p>
+        <div class="time">1 week ago</div>
+      </div>
+    </div>
+
+    <div class="notification">
+      <img src="woman2.jpg" alt="User">
+      <div class="content">
+        <p><span class="name">Nathan Petersa</span> reacted to your post <span class="link">Top 5 VS Code
+            Extensions</span></p>
+        <div class="time">2 weeks ago</div>
+      </div>
+    </div>
+
+    <div class="notification">
+      <img src="woman3.jpg" alt="User">
+      <div class="content">
+        <p><span class="name">Anna Kim</span> left the group <span class="link">Bug Hunters Community</span></p>
+        <div class="time">2 weeks ago</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

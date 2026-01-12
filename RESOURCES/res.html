@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Advanced</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #2d3e50;
+            color: #fff;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px 10px;
+        }
+
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #6fe3b7;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar ul li:hover {
+            background-color: #4f5b69;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            width: 240px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        .preview {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .preview img,
+        .preview video {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #6fe3b7;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sidebar">
+        <h2>Resources</h2>
+        <ul>
+            <li>Notes</li>
+            <li>Videos</li>
+            <li>Books</li>
+            <li>Practice Files</li>
+            <li>Code Samples</li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h1 class="section-title">Advanced HTML & CSS Resources</h1>
+        <div class="card-container">
+            <div class="card">
+                <h3>Download Notes (PDF)</h3>
+                <p>Complete HTML and CSS theory.</p>
+                <a href="downloads/html_css_notes.pdf" download>Download Now</a>
+            </div>
+
+            <div class="card">
+                <h3>Practice Projects</h3>
+                <p>Try out mini projects to sharpen your skills.</p>
+                <a href="downloads/html_css_projects.zip" download>Download Projects</a>
+            </div>
+
+            <div class="card">
+                <h3>Code Examples</h3>
+                <p>Ready-made HTML/CSS code samples.</p>
+                <a href="downloads/sample_codes.html" download>Download Code</a>
+            </div>
+
+            <div class="card">
+                <h3>Hand-drawn Diagrams</h3>
+                <p>Images that explain layout, flexbox, etc.</p>
+                <a href="images/hand_diagram1.jpg" target="_blank">View Image</a>
+            </div>
+        </div>
+
+        <div class="preview">
+            <h2 class="section-title">Preview: Tutorial Videos</h2>
+            <video controls src="videos/html_intro.mp4"></video>
+            <video controls src="videos/css_flexbox.mp4"></video>
+        </div>
+
+        <div>
+            <h2 class="section-title">Recent Files</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>File Name</th>
+                        <th>Size</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Flexbox Guide.pdf</td>
+                        <td>1.2MB</td>
+                        <td>July 20, 2025</td>
+                        <td><a href="#">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>CSS Grid Video.mp4</td>
+                        <td>22MB</td>
+                        <td>July 18, 2025</td>
+                        <td><a href="#">Download</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+
+</html>
