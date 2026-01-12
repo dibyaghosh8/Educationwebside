@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MEMBER'S AREA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Navbar/Header */
+    #header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 25px;
+      background-color: #0ea5e9;
+      color: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+    }
+
+    #header a img {
+      width: 100px;
+      border-radius: 6px;
+    }
+
+    #header a img:hover {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+
+    #navber {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
+
+    #navber li a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background-color: white;
+      color: #0ea5e9;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    #navber li a:hover {
+      background-color: #0ea5e9;
+      color: white;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #1e293b;
+      color: #fff;
+      padding: 25px 20px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 22px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid #3b4557;
+      padding-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 18px 0;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      padding: 8px 10px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #0ea5e9;
+      color: white;
+    }
+
+    .sidebar ul li i {
+      width: 20px;
+      text-align: center;
+    }
+
+    /* Main Content */
+    .right {
+      margin-left: 240px;
+      padding: 20px;
+    }
+
+    #member-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .box {
+      width: 230px;
+      height: 120px;
+      padding: 20px;
+      background-color: #ddd;
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px #999;
+      transition: 0.3s ease;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 4px 4px 15px #aaa;
+      background-color: #fff;
+    }
+
+    .box h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .box p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .student {
+      background-color: #afe5d3;
+    }
+
+    .admin {
+      background-color: #f1dda4;
+    }
+
+    .library {
+      background-color: #fdbaba;
+    }
+
+    .notice {
+      background-color: #ccccff;
+    }
+
+    .help {
+      background-color: #b9d6d6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h2>Dashboard</h2>
+    <ul>
+      <li><i class="fa-solid fa-house"></i> Home</li>
+      <li><i class="fa-solid fa-book"></i> Courses</li>
+      <li><i class="fa-solid fa-bell"></i> Notifications</li>
+      <li><i class="fa-solid fa-envelope"></i> Messages</li>
+      <li><i class="fa-solid fa-gear"></i> Settings</li>
+    </ul>
+  </nav>
+
+  <!-- Main Area -->
+  <div class="right">
+
+    <!-- Navbar -->
+    <section id="header">
+      <a href="#"><img src="logo.jpg" alt="Logo"></a>
+      <ul id="navber">
+        <li><a href="file:///C:/Users/Dibya/Desktop/webside/home.html"><i class="fa-solid fa-xmark"></i> Close</a></li>
+      </ul>
+    </section>
+
+    <!-- Member Area -->
+    <section id="member-area">
+
+      <a href="account.html" class="box student">
+        <h3>STUDENT</h3>
+        <p>Click here to login portal</p>
+      </a>
+
+      <a href="teacher.html" class="box teacher">
+        <h3>TEACHER</h3>
+        <p>Click here to login portal</p>
+      </a>
+
+      <a href="courses.html" class="box library">
+        <h3>COURSE LIBRARY</h3>
+        <p>Explore all available courses</p>
+      </a>
+
+      <a href="notice.html" class="box notice">
+        <h3>NOTICE BOARD</h3>
+        <p>See latest announcements</p>
+      </a>
+
+      <a href="help.html" class="box help">
+        <h3>HELP & SUPPORT</h3>
+        <p>Click here for assistance</p>
+      </a>
+
+    </section>
+  </div>
+
+</body>
+
+</html>

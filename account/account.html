@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('bg.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 380px;
+      background: #fff;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .fa-xmark {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 24px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00bfa6;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .log {
+      background-color: #d9fdf1;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    button {
+      padding: 12px;
+      background: #00bfa6;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #009e8a;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #00bfa6;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <a href="file:///C:/Users/Dibya/Desktop/webside/home.html"><i class="fa-solid fa-xmark"></i></a>
+    <h2>Login</h2>
+    <div class="log">
+      <form action="student.html" method="GET">
+        <input type="text" placeholder="Username" name="username" required>
+        <input type="password" placeholder="Password" name="password" required>
+        <p><a href="#">Forgot password?</a></p>
+        <button type="submit">Sign In</button>
+        <p>Don't have an account? <a href="REGISTRATION.html">Register</a></p>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>

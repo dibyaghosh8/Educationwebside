@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f5f9fa;
+      color: #333;
+    }
+
+    #header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #0e6164;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #header a img {
+      width: 120px;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+
+    #header a img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 3px 10px rgba(255, 255, 255, 0.5);
+    }
+
+    #navber {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      align-items: center;
+    }
+
+    #navber li a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      transition: 0.3s ease;
+    }
+
+    #navber li a:hover {
+      color: #c8f7dc;
+    }
+
+    h2 {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #ecf5f4;
+      font-size: 28px;
+      color: #0e6164;
+      font-weight: 600;
+    }
+
+    .grid-container1 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 30px 50px;
+      justify-content: center;
+    }
+
+    .box {
+      background-color: #00bcd4;
+      padding: 25px;
+      text-align: center;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease;
+    }
+
+    .box:hover {
+      background-color: #0097a7;
+      transform: translateY(-5px);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      #navber {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .grid-container1 {
+        padding: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section id="header">
+    <a href="#"><img src="logo.jpg" alt="Logo" /></a>
+    <ul id="navber">
+      <li><a href="search.html""><i class="fa-solid fa-magnifying-glass"></i></i> Search</a></li>
+      <li><a href="account_database.html"><i class="fa-solid fa-circle-user"></i> Login</a></li>
+      <li><a href=" file:///C:/Users/Dibya/Desktop/webside/home.html"><i class="fa-solid fa-xmark"></i> Close</a></li>
+    </ul>
+  </section>
+
+  <h2>Student Dashboard</h2>
+
+  <div class="grid-container1">
+    <a href="#">
+      <div class="box">Dashboard</div>
+    </a>
+    <a href="#">
+      <div class="box">Profile</div>
+    </a>
+    <a href="#">
+      <div class="box">Courses</div>
+    </a>
+    <a href="#">
+      <div class="box">Results</div>
+    </a>
+    <a href="#">
+      <div class="box">Attendance</div>
+    </a>
+    <a href="#">
+      <div class="box">Assignments</div>
+    </a>
+    <a href="#">
+      <div class="box">Scholarship</div>
+    </a>
+    <a href="#">
+      <div class="box">Student details</div>
+    </a>
+    <a href="#">
+      <div class="box">Exam Schedule</div>
+    </a>
+    <a href="#">
+      <div class="box">Library Access</div>
+    </a>
+    <a href="#">
+      <div class="box">Fee Payment</div>
+    </a>
+    <a href="#">
+      <div class="box">Support</div>
+    </a>
+    <a href="#">
+      <div class="box">Log Out</div>
+    </a>
+  </div>
+
+</body>
+
+</html>

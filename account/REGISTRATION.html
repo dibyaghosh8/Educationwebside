@@ -1,0 +1,371 @@
+<html>
+
+<head>
+    <title> REGISTRATION</title>
+    <style>
+        body {
+            background-color: hsl(169, 16%, 81%);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+
+        .mean {
+            padding: 30px;
+            margin-top: -35px;
+
+        }
+
+        h1 {
+            margin-left: 500px;
+            color: rgb(23, 113, 119);
+        }
+
+        input[type=text],
+        input[type=password],
+        input[type=EMAIL],
+        input[type=NUMBER],
+        input[type=city],
+        input[type=state],
+        input[type=country],
+        input[type=zip],
+        textarea {
+
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            background: hsl(157, 68%, 96%);
+            border: none;
+            padding: 5px;
+            border-radius: 4px;
+            height: 40;
+        }
+
+        button[type="submit"] {
+            padding: 40px;
+            text-indent: 20px;
+            background-color: rgb(45, 170, 153);
+            border: rgba(151, 153, 132, 0.459);
+            color: rgb(0, 0, 0);
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+            width: 90%;
+            letter-spacing: 7px;
+            margin-left: 60PX;
+            height: 50;
+            font-weight: bold;
+            margin-top: 1%;
+
+        }
+
+        button[type="submit"]:hover {
+            background-color: rgb(99, 231, 231);
+        }
+
+        fieldset {
+            border: 4px solid hsl(166, 81%, 32%);
+            margin: 30px;
+        }
+
+        .f1 {
+            background-color: hsl(167, 29%, 91%);
+
+        }
+
+        .f2 {
+            background-color: hsl(167, 29%, 91%);
+        }
+
+        .f3 {
+            background-color: hsl(167, 29%, 91%);
+        }
+
+        .f4 {
+            background-color: hsl(167, 29%, 91%);
+        }
+
+        legend {
+            color: blue;
+            font-size: 30px;
+        }
+
+        sup {
+            color: red;
+        }
+
+        .form-control {
+            letter-spacing: 7px;
+            font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .file_1 {
+            margin-left: 930px;
+        }
+
+        hr {
+            height: 2px;
+        }
+
+        .file {
+            background-color: hsl(167, 29%, 91%);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .hi {
+            margin-left: 40px;
+            margin-top: -1px;
+        }
+
+        .submit-button a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <br>
+        <b>
+            <h1> REGISTRATION FORM</h1>
+        </b>
+        <div class="mean">
+            <fieldset>
+                <div class="f1">
+                    <legend><b> STUDENT DETAILS <sup>*</sup></b></legend><br><br>
+                    <b><sup>*</sup>FIRST NAME : </b>
+                    <input type="text" size="25" placeholder="ENTER YOUR FIRST NAME">
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>MIDDLE NAME : </b>
+                    <input type="text" size="25" placeholder="ENTER YOUR MIDDLE NAME">
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b><sup>*</sup>LAST NAME : </b>
+                    <input type="text" size="25" placeholder="ENTER YOUR LAST NAME">
+                    <br>
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>
+                    <b><sup>*</sup><label for="BIRTHDAY">DATE OF BIRTH</label></b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="DATE" id="BIRTHDAY" name="BIRTHDAY" size="50">
+                    <b><label for="EMAIL"> EMAIL</label></b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="EMAIL" id="EMAIL" name="EMAIL" size="40" placeholder="abc123@gmail.com">
+                    <br><br>
+                    <b><sup>*</sup>NATIONALITY: </b>
+                    <input type="text" size="40" placeholder="ENTER YOUR NATIONALITY">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b><sup>*</sup><label for="RELIGION">RELIGION : </label></b>
+                    <select id="RELIGION" name="REGISTRATION" size=" ">
+                        <option value=" HINDU"> HINDU</option>
+                        <option value="ISLAM"> ISLAM</option>
+                        <option value=" SIKH"> SIKH</option>
+                        <option value=" BUDH"> BUDH</option>
+                        <option value="SAI"> SAI</option>
+                        <option value=" JAIN"> JAIN</option>
+                    </select>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b><label for="MARITAL STATUS">MARITAL STATUS:</label></b>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="RADIO" id="MARITAL STATUS" name="MARITAL STATUS" value="SINGLE"> SINGLE
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="RADIO" id="MARITAL STATUS" name="MARITAL STATUS" value="MARRIED">MARRIED
+                    <br><br>
+                    <b><sup>*</sup>PHONE : &nbsp;&nbsp;&nbsp;&nbsp;<input type="TEXT" name="COUNTRY NAME" size="1"
+                            value=" +91"></b>
+                    <input type="TEXT" name="PHONE" size="30" placeholder="ENTER YOUR PHONE NUMBER">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b><sup>*</sup><label for="CASTR">CASTR:</label></b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="RADIO" id="CASTR" name="CASTR" value="ST"> ST
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="RADIO" id="CASTR" name="CASTR" value="SC"> SC
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="RADIO" id="CASTR" name="CASTR" value="OBC-B"> OBC-A
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="RADIO" id="CASTR" name="CASTR" value="OBC-B"> OBC-B
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="RADIO" id="CASTR" name="CASTR" value="MINORITIES"> MINORITIES
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="RADIO" id="CASTR" name="CASTR" value="EWS"> EWS
+                    <br><br>
+                    <b><sup>*</sup><label for="DISSERENTLY ABLED">DISSERENTLY ABLED</label> </b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="RADIO" id="GENDER" name="GENDER" value="YES"> YES
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="RADIO" id="GENDER" name="GENDER" value="NO"> NO
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b><sup>*</sup>ADDHAR NUMBER : </b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="tEXT" size="50" placeholder="1111  2222  3333  4444">
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="f2">
+                    <legend><b> QUALIFICATION DETAILS <sup>*</sup> </b></legend><br><br>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>S.NO.</th>
+                                <th>QUALIFICATION </th>
+                                <th> BOARD/UNIVERSITY</th>
+                                <th> SUBJECT</th>
+                                <th> PASSINF YEAR</th>
+                                <th> PERCENTAGE</th>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="1"> </td>
+                                <td>SECONDAEY<sup>*</sup></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="2"></td>
+                                <td>SENIOR SECONDAEY <sup>*</sup></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="3"></td>
+                                <td>GRADUATION <sup>*</sup></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="4"></td>
+                                <td>POST GRADUATION</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="5"></td>
+                                <td>ANY OTHER</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="f3">
+                    <legend><b> PARENTS DETAILS <sup>*</sup> </b></legend><br><br>
+                    <b><sup>*</sup>FATHER'S NAME : </b>
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" size="30" placeholder="FIRST NAME ">
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" size="30" placeholder=" MIDDLE NAME">
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" size="30" placeholder="LAST NAME">
+                    <br><br>
+                    <b><sup>*</sup>MOTHER'S NAME : </b>
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" size="30" placeholder="FIRST NAME">
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" size="30" placeholder=" MIDDLE NAME">
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" size="30" placeholder=" LAST NAME">
+                    <br><br>
+                    <b> <sup>*</sup>ANNUAL INCOME : </b>
+                    <input type="text" size="45">
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b><sup>*</sup>RELATIONSHIP WITH GUARDIAN : </b>
+                    <input type="text" size="45">
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br><br>
+                    <b><sup>*</sup>FATHER'S OCCUPATION: </b>
+                    <input type="text" size="45">
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>MATHER'S OCCUPATION: </b>
+                    <input type="text" size="45">
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="f4">
+                    <legend><b> ADDRESS DETAILS <sup>*</sup> </b></legend><br><br>
+                    <b>ADDRESS:</b><br>
+                    <textarea rows="3" cols="150"></textarea>
+                    <div class="add">
+                        <input type="text" class="form-control" id="autocomplete" placeholder="VILLAGE" size="45">
+                        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" id="autocomplete" placeholder="POST OFFICE" size="45">
+                        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" id="autocomplete" placeholder="POLICE STATION"
+                            size="45">
+                        <br><br>
+                        <input type="text" class="form-control" id="autocomplete" placeholder="BLOCK" size="45">
+                        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" id="autocomplete" placeholder="AREA" size="45">
+                        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" id="autocomplete" placeholder="DISTRICT" size="45">
+                        <br><br>
+                        <input type="city" class="form-control" id="inputCity" placeholder=" CITY" size="30">
+                        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="state" class="form-control" id="inputState" placeholder="STATE" size="30">
+                        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="country" class="form-control" id="inputCountry" placeholder="COUNTRY" size="30">
+                        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="ZIP" class="form-control" id="inputzip" placeholder="ZIP" size="30">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="file">
+                    <br>
+                    <legend>CHOOSE FILE<sup>*</sup> </legend>
+                    <hr>
+                    <p><sup>*</sup><b>PHOTO</b>&nbsp;(The photo should be 3.5cm * 4.5cm,
+                        in the format of jpg or jpeg and the size is between 50kb-150kb) <input type="file"
+                            class="file_1" name="PHOTO"></p>
+                    <hr>
+                    <p><sup>*</sup><b>SIGNATURE IN FULL</b>&nbsp;(The photo should be between 50kb-150kb) <input
+                            type="file" class="file_1" name="SIGNATURE IN FULL"></p>
+                    <hr>
+                    <p><sup>*</sup><b>AADHAR CARD</b>&nbsp;(The photo should be between 150kb-250kb) <input type="file"
+                            class="file_1" name="PHOTO"></p>
+                    <hr>
+                    <p><sup>*</sup><b>CASTE CERTIFICATE</b>&nbsp;(The photo should be between 150kb-250kb) <input
+                            type="file" class="file_1" name="PHOTO"></p>
+                    <hr>
+                    <p><sup>*</sup><b>D. O. B CERTIFICATE</b>&nbsp;(The photo should be between 150kb-250kb) <input
+                            type="file" class="file_1" name="PHOTO"></p>
+                    <hr>
+                    <p><sup>*</sup><b>INCOME CERTIFICATE</b>&nbsp;(The photo should be between 150kb-250kb) <input
+                            type="file" class="file_1" name="PHOTO"></p>
+                    <hr>
+                    <p><sup>*</sup><b>LAST BOARD EXAMINATION RESULT</b>&nbsp;(The photo should be between 150kb-250kb)
+                        <input type="file" class="file_1" name="PHOTO">
+                    </p>
+                    <hr>
+                    <p><sup>*</sup><b>BABK DETAILS</b>&nbsp;(The photo should be between 150kb-250kb) <input type="file"
+                            class="file_1" name="PHOTO"></p>
+                    <hr>
+                    <p><b>RESIDENTIAL CERTIFICATE</b>&nbsp;(The photo should be between 150kb-250kb) <input type="file"
+                            class="file_1" name="PHOTO"></p>
+                    <hr>
+                </div>
+            </fieldset>
+            <input type="checkbox" class="hi" name="CONFIRM AND SUBMIT">CONFIRM AND SUBMIT
+            <br><br>
+            <div class="btn">
+                <button type="submit" class="submit-button"><a href="student.html">SUBMIT</a></button>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - LearnOnline</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #f9f9ff;
+      color: #333;
+    }
+
+    header {
+      background: #fff;
+      padding: 20px 40px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #6a0dad;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #6aca3e;
+
+    }
+
+    .main-section {
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero {
+      background: #eef1ff;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .values h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #444;
+      text-align: center;
+    }
+
+    .values .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .values .card i {
+      color: #6a0dad;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .why-us {
+      padding: 40px 0;
+      background: #fff;
+    }
+
+    .why-us h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .why-block {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+      margin-bottom: 60px;
+      align-items: center;
+    }
+
+    .why-block:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .why-img,
+    .why-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .why-img img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .why-text h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .why-text p {
+      color: #555;
+    }
+
+    .mentor-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .mentor-card {
+      width: 260px;
+      padding: 20px;
+      background: #e0f8f5;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .mentor-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .mentor-card img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #6c63ff;
+      margin-bottom: 10px;
+    }
+
+    .mentor-card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .join-section {
+      background: #f1f1f1;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .join-section h2 {
+      color: #002a4f;
+    }
+
+    .join-section p {
+      max-width: 600px;
+      margin: 10px auto 30px;
+    }
+
+    .join-section input {
+      height: 40px;
+      width: 320px;
+      border-radius: 10px;
+    }
+
+    .join-section button {
+      width: 130px;
+      height: 40px;
+      background-color: #549ddd;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .join-section button:hover {
+      background-color: #002a4f;
+    }
+
+    .join-us {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      padding: 50px 20px;
+    }
+
+    .join-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .join-text h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .join-text p {
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    .join-text button {
+      background: #6c63ff;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .join-images {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      min-width: 250px;
+    }
+
+    .join-images img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #f5f5f5;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .footer-column li {
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    .footer-brand button {
+      margin-top: 10px;
+      background: #6a0dad;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer-brand p {
+      color: #555;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Learn Online</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Courses</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="main-section">
+    <div class="hero">
+      <h2>Unlock Your Potential</h2>
+      <p>We provide world-class learning solutions to help students and professionals grow with confidence.</p>
+    </div>
+
+    <!-- Image Grid -->
+    <div class="image-grid">
+      <img src="ai4.jpg" alt="AI">
+      <img src="python5.jpg" alt="Python">
+      <img src="webdesign.jpg" alt="Web Design">
+      <img src="sql.jpg" alt="SQL">
+    </div>
+
+    <!-- Core Values -->
+    <div class="values">
+      <h3>Our Core Beliefs</h3>
+      <div class="card"><i class="fas fa-users"></i> We grow together through teamwork.</div>
+      <div class="card"><i class="fas fa-bolt"></i> Innovation leads our progress.</div>
+      <div class="card"><i class="fas fa-heart"></i> We care deeply about people and impact.</div>
+    </div>
+  </section>
+
+  <!-- Why Us Section -->
+ <section class="why-us">
+  <h2>Why Learn With 'Learn Online'?</h2>
+
+  <div class="why-block">
+    <div class="why-img"><img src="ads2.png" alt=""></div>
+    <div class="why-text">
+      <h3>Supportive Learning Environment</h3>
+      <p>
+        At Learn Online, we foster a warm and encouraging learning atmosphere where every student feels confident and supported.
+        Our expert mentors, clear explanations, and active community create a space where learning becomes both enjoyable and meaningful.
+        We believe in growing together by helping each other succeed.
+      </p>
+    </div>
+  </div>
+
+  <div class="why-block">
+    <div class="why-img"><img src="ads1.jpg""></div>
+    <div class="why-text">
+      <h3>Student-Centered Approach</h3>
+      <p>
+        Every course at Learn Online is carefully designed with the learner in mind.
+        Whether you're a complete beginner or an advanced student, our step-by-step approach ensures you learn at your own place.
+        We focus on making education personal, engaging, and tailored to your goals.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Mentors Section -->
+  <section class="mentor-container">
+
+  <div class="mentor-card">
+    <img src="man1.jpg"Arjun Mehta">
+    <h4>Arjun Mehta</h4>
+    <p>Frontend Developer & UI/UX Expert</p>
+  </div>
+
+  <div class="mentor-card">
+    <img src="woman1.jpg" lt="Ritika Sen">
+    <h4>Ritika Sen</h4>
+    <p>Data Scientist & Python Instructor</p>
+  </div>
+
+  <div class="mentor-card">
+    <img src="woman2.jpg" lt="koyel dey">
+    <h4>koyel Verma</h4>
+    <p>SEO & Digital Marketing Strategist</p>
+  </div>
+
+  <div class="mentor-card">
+    <img src="woman3.jpg" lt="Priya Roy">
+    <h4>Priya Roy</h4>
+    <p>Machine Learning & AI Consultant</p>
+  </div>
+
+  <div class="mentor-card">
+    <img src="man2.jpg"at="Tanmay Gupta">
+    <h4>Tanmay Gupta</h4>
+    <p>Full Stack Developer & Bootcamp Instructor</p>
+  </div>
+
+  <div class="mentor-card">
+    <img src="woman4.jpg" alt="Saloni Das">
+    <h4>Saloni Das</h4>
+    <p>Cybersecurity & Ethical Hacking Trainer</p>
+  </div>
+
+  <div class="mentor-card">
+    <img src="man3.jpg" alt="Ravi Jha">
+    <h4>Ravi Jha</h4>
+    <p>Cloud Expert with AWS & Azure</p>
+  </div>
+
+  <div class="mentor-card">
+    <img src="woman5.jpg" alt="Neha Sharma">
+    <h4>Neha Sharma</h4>
+    <p>Soft Skills & Communication Coach</p>
+  </div>
+</section>
+
+
+  <!-- Join Us -->
+  <section class="join-us">
+    <div class="join-text">
+      <h3>Become a Part of Learn Online</h3>
+      <p>Join a growing network of learners and mentors. We welcome passion and talent to uplift education globally.</p>
+      <button>Apply as Mentor</button>
+    </div>
+    <div class="join-images">
+      <img src="java3.jpg" alt="">
+      <img src="c++2.jpg" alt="">
+      <img src="software_eng.jpg" alt="">
+      <img src="reactjs1.jpg" alt="">
+    </div>
+  </section>
+
+  <section class="join-section">
+    <h2>Join as a Student</h2>
+    <p>Fill in the details below to join our platform and start learning today!</p>
+    <form>
+      <input type="text" name="name" placeholder="  Your Name" required><br><br>
+      <input type="email" name="email" placeholder="  Your Email" required><br><br>
+      <button type="submit">Join Now</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>🎓 Learn Online</h3>
+        <p>Building the next generation of learners and leaders through accessible education.</p>
+        <button>Subscribe Now</button>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Courses</li>
+          <li>Mentors</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Your Account</h4>
+        <ul>
+          <li>Login</li>
+          <li>Register</li>
+          <li>Dashboard</li>
+          <li>Settings</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Support</h4>
+        <ul>
+          <li>Blog</li>
+          <li>FAQs</li>
+          <li>Privacy Policy</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
