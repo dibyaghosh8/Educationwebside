@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask Doubts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #333;
+      padding: 20px;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 40px 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1rem;
+      color: #777;
+      margin-bottom: 40px;
+    }
+
+    .doubt-section,
+    .topic-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .doubt-box,
+    .topic-box {
+      background: #e9f1ff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 12px;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .doubt-box i,
+    .topic-box i {
+      font-size: 2rem;
+      color: #4169e1;
+      margin-bottom: 10px;
+    }
+
+    .doubt-box p,
+    .topic-box p {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .doubt-box:hover,
+    .topic-box:hover {
+      transform: translateY(-5px);
+      background: #dbe8ff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section id="doubt">
+    <h2 class="section-title">❓ Ask Doubts</h2>
+    <p class="section-subtitle">Get answers from experts instantly</p>
+
+    <div class="doubt-section">
+      <div class="doubt-box">
+        <i class="fas fa-user-graduate"></i>
+        <p>Student Queries</p>
+      </div>
+      <div class="doubt-box">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <p>Expert Replies</p>
+      </div>
+      <div class="doubt-box">
+        <i class="fas fa-comments"></i>
+        <p>Live Chat</p>
+      </div>
+      <div class="doubt-box">
+        <i class="fas fa-book-open"></i>
+        <p>Study Materials</p>
+      </div>
+      <div class="doubt-box">
+        <i class="fas fa-lightbulb"></i>
+        <p>Instant Solutions</p>
+      </div>
+      <div class="doubt-box">
+        <i class="fas fa-question-circle"></i>
+        <p>Common Doubts</p>
+      </div>
+      <div class="doubt-box">
+        <i class="fas fa-search"></i>
+        <p>Browse Topics</p>
+      </div>
+      <div class="doubt-box">
+        <i class="fas fa-pen"></i>
+        <p>Ask a Question</p>
+      </div>
+      <div class="doubt-box">
+        <i class="fas fa-video"></i>
+        <p>Video Answers</p>
+      </div>
+      <div class="doubt-box">
+        <i class="fas fa-clock"></i>
+        <p>24x7 Support</p>
+      </div>
+      <div class="doubt-box">
+        <i class="fas fa-users"></i>
+        <p>Community Help</p>
+      </div>
+      <div class="doubt-box">
+        <i class="fas fa-trophy"></i>
+        <p>Top Contributors</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COURSES</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f8f9fc;
+      color: #333;
+    }
+
+    header {
+      background: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #0a2351;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #e91e63;
+    }
+
+    .profile-icons i {
+      margin-left: 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px 40px;
+    }
+
+    .sidebar {
+      width: 250px;
+      padding-right: 20px;
+    }
+
+    .sidebar input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .sidebar h4 {
+      margin: 20px 0 10px;
+      font-size: 16px;
+      color: #0a2351;
+    }
+
+    .sidebar label {
+      display: block;
+      margin: 5px 0;
+    }
+
+    .sidebar select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .main-content {
+      flex: 1;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .tabs button {
+      padding: 8px 18px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .tabs button.active,
+    .tabs button:hover {
+      background: #e91e63;
+      color: white;
+      border-color: #e91e63;
+    }
+
+    .sort-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .sort-section select {
+      padding: 6px 10px;
+      border-radius: 8px;
+      border: 1px solid#ccc;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    .course-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .course-card .info {
+      padding: 15px;
+    }
+
+    .course-card .info h4 {
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #0a2351;
+    }
+
+    .course-card .meta {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .floating-btn {
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      background: #e91e63;
+      color: white;
+      border: none;
+      width: 50px;
+      height: 45px;
+      border-radius: 50%;
+      font-size: 28px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">🎓 Learn online</div>
+    <nav>
+      <a href="file:///C:/Users/Dibya/Desktop/webside/home.html#">Home</a>
+      <a href="#" style="color: #e91e63; font-weight: bold;">Courses</a>
+      <a href="#">People</a>
+      <a href="#">Analytics</a>
+    </nav>
+    <div class="profile-icons">
+      <i class="fas fa-bell"></i>
+      <i class="fa-solid fa-download"></i>
+      <i class="fas fa-user-circle"></i>
+    </div>
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <input type="text" placeholder="Search your favorite topic">
+
+      <h4>Course Category</h4>
+      <label><input type="checkbox"> Web Design</label>
+      <label><input type="checkbox"> Programming</label>
+      <label><input type="checkbox"> Graphics Design</label>
+      <label><input type="checkbox"> Marketing</label>
+      <label><input type="checkbox"> Photography</label>
+      <label><input type="checkbox"> Data Science</label>
+      <label><input type="checkbox"> Student Special</label>
+
+      <h4>Course Type</h4>
+      <label><input type="checkbox"> Regular Course</label>
+      <label><input type="checkbox"> Form Fillup Prep</label>
+      <label><input type="checkbox"> Result Oriented</label>
+
+      <h4>Course Status</h4>
+      <label><input type="checkbox"> Most Popular</label>
+      <label><input type="checkbox"> Recently Added</label>
+      <label><input type="checkbox"> Trending</label>
+      <label><input type="checkbox"> Top Rated</label>
+      <label><input type="checkbox"> Free Courses</label>
+      <label><input type="checkbox"> Premium Courses</label>
+
+      <h4>Difficulty Level</h4>
+      <select>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Expert</option>
+      </select>
+
+      <h4>Course Duration</h4>
+      <select>
+        <option>All</option>
+        <option>Below 5 Hours</option>
+        <option>5 - 10 Hours</option>
+        <option>10+ Hours</option>
+      </select>
+
+      <h4>Sort Courses</h4>
+      <select>
+        <option>Newest First</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+        <option>Name: A-Z</option>
+        <option>Duration: High to Low</option>
+      </select>
+
+      <h4>Level</h4>
+      <select>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+
+      <h4>Sort by</h4>
+      <select>
+        <option>Newest First</option>
+        <option>Price Low to High</option>
+        <option>Duration</option>
+        <option>A-Z</option>
+      </select>
+    </div>
+
+    <main class="main-content">
+      <div class="tabs">
+        <button>All</button>
+        <button class="active">Published</button>
+        <button>Draft</button>
+        <button>Archived</button>
+      </div>
+
+      <div class="sort-section">
+        <span>Showing 12 courses</span>
+        <select>
+          <option>Recency</option>
+          <option>Alphabetically</option>
+        </select>
+      </div>
+
+      <div class="course-grid">
+        <div class="course-card">
+          <img src="ai.jpg" alt="AI Course">
+          <div class="info">
+            <h4>Artificial Intelligence Fundamentals</h4>
+            <p class="meta">12 Lessons • 3hr 30min</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="c++.jpg" alt="C++ Course">
+          <div class="info">
+            <h4>C++ Programming from Scratch</h4>
+            <p class="meta">23 Lessons • 10hr 30min</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="dbms.jpg" alt="DBMS Course">
+          <div class="info">
+            <h4>Database Management System (DBMS)</h4>
+            <p class="meta">20 Lessons • 25hr 45min</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="html.jpg" alt="HTML Course">
+          <div class="info">
+            <h4>HTML5 & Web Page Structuring</h4>
+            <p class="meta">18 Lessons • 2hr 15min</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="java.jpg" alt="Java Course">
+          <div class="info">
+            <h4>Java Programming for Beginners</h4>
+            <p class="meta">22 Lessons • 30hr</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="js.jpg" alt="JavaScript Course">
+          <div class="info">
+            <h4>JavaScript Essentials and Projects</h4>
+            <p class="meta">15 Lessons • 24hr 10min</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="mso.jpg" alt="MS Office Course">
+          <div class="info">
+            <h4>Mastering Microsoft Office Suite</h4>
+            <p class="meta">18 Lessons • 60 day</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="python.jpg" alt="Python Course">
+          <div class="info">
+            <h4>Python Programming: From Zero to Hero</h4>
+            <p class="meta">20 Lessons • 30hr 10min</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="ui_ux.jpg" alt="UI/UX Design Course">
+          <div class="info">
+            <h4>UI/UX Design Principles & Prototyping</h4>
+            <p class="meta">25 Lessons • 40 day</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="nodejs.jpg" alt="NodeJS Course">
+          <div class="info">
+            <h4>Backend Development with Node.js</h4>
+            <p class="meta">22 Lessons • 28hr 20min</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="sql.jpg" alt="SQL Course">
+          <div class="info">
+            <h4>SQL Queries and Database Handling</h4>
+            <p class="meta">17 Lessons • 21hr 40min</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="c.jpg" alt="C Language Course">
+          <div class="info">
+            <h4>Introduction to C Programming</h4>
+            <p class="meta">23 Lessons • 50hr 30min</p>
+          </div>
+        </div>
+
+      </div>
+  </div>
+  </main>
+  </div>
+  <button class="floating-btn">+</button>
+</body>
+
+</html>

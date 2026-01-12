@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COMMUNICATION</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .sidebar {
+  width: 220px;
+  background-color: #ffffff;
+  padding: 25px 20px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #ddd;
+  border-radius: 0 10px 10px 0;
+}
+
+.sidebar h2 {
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 18px;
+  font-size: 17px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #444;
+}
+
+.sidebar ul li:hover {
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+    .main {
+      margin-left: 200px;
+      padding: 10px;
+      width: calc(100% - 200px);
+      height: 60px;
+      overflow-y: auto;
+      background-color: #fff8f0;
+      margin-top: 10px;
+    }
+
+    .hero-btn {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+
+    .hero-btn select {
+      height: 35px;
+      width: 160px;
+      padding: 5px 10px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      text-align: center;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .hero-btn select:hover {
+      background-color: #eee;
+    }
+
+    option {
+      text-align: center;
+    }
+
+    .hero-main {
+      background-color: #f7f2f2;
+      width: 78%;
+      margin-left: 245px;
+      padding: 10px;
+      margin-top: 30px;
+      border-radius: 20px;
+    }
+
+    .hero {
+      display: flex;
+      gap: 40px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 10px;
+    }
+
+    .hero::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hero-card {
+      background-color: #ffe3c2;
+      width: 200px;
+      height: 190px;
+      border-radius: 20px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      flex: 0 0 auto;
+      text-align: center;
+      transition: transform 0.3s ease;
+      margin-left: 15px;
+    }
+
+    .hero-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .hero-card img {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      margin-top: 8px;
+      object-fit: cover;
+    }
+
+    .hero-card h3 {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #444;
+    }
+
+    .hero-card p {
+      font-size: 14px;
+      margin-top: 5px;
+      color: #555;
+    }
+
+    .body-hero {
+      display: flex;
+      justify-content: center;
+      padding: 40px 0;
+      background-color: #f9f5fc;
+    }
+
+    .hero-left {
+      background-color: rgb(218, 136, 235);
+      width: 350px;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .hero-left img {
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-left h3 {
+      font-size: 22px;
+      margin-bottom: 25px;
+      color: #fff;
+    }
+
+    #navber {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 0;
+      margin-bottom: 25px;
+    }
+
+    #navber li {
+      list-style: none;
+      flex: 1;
+      text-align: center;
+    }
+
+    #navber li a {
+      text-decoration: none;
+      font-size: 14px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    #navber li p {
+      margin-top: 5px;
+      font-size: 15px;
+      color: #fff;
+    }
+
+    .btn-main-hero {
+      background-color: #fff;
+      color: #6c3483;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+      box-shadow: 0 4px 12px rgba(77, 66, 235, 0.3);
+    }
+
+    .btn-main-hero:hover {
+      background-color: yellow;
+      color: #000000;
+    }
+
+    .hero-right {
+      background-color: rgb(200, 200, 224);
+      width: 350px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .body-right {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 10px;
+      gap: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .right-img img {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .right-text {
+      flex-grow: 1;
+    }
+
+    .right-text h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .right-text p {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .right-btn2 {
+      background-color: #6c5ce7;
+      color: #fff;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .right-btn2:hover {
+      background-color: #dfdde9;
+      color: #6c3483;
+    }
+
+    .right-btn1 {
+      background-color: #dfdde9;
+      color: #6c3483;
+      padding: 8px 24px;
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .right-btn1:hover {
+      background-color: #6c5ce7;
+      color: #fff;
+    }
+
+    #journey {
+      padding: 60px 30px;
+      background: #f4f9f8;
+      text-align: center;
+    }
+
+    #journey h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #2e3c40;
+    }
+
+    #journey p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .steps-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .step-box {
+      flex: 1 1 220px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .step-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .step-box span {
+      display: inline-block;
+      font-weight: bold;
+      color: #009688;
+      margin-bottom: 10px;
+    }
+
+    .step-box h4 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .step-box p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .food-main {
+      margin-left: 200px;
+    }
+
+    #foot {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      background-color: #1c2b2d;
+      color: #f0f0f0;
+      padding: 50px 20px;
+    }
+
+    .footer-section {
+      flex: 1 1 200px;
+      margin: 20px;
+    }
+
+    .footer-section h4 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #cfcfcf;
+      text-decoration: none;
+    }
+
+    .footer-section a:hover {
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li>Home</li>
+      <li>Courses</li>
+      <li>Notifications</li>
+      <li>Messages</li>
+      <li>Settings</li>
+    </ul>
+  </nav>
+
+  <main class="main">
+  <div class="hero-btn">
+
+    <!-- Programming Topics -->
+    <select class="btn">
+      <option selected disabled> Programming Topics</option>
+      <option value="Python.html">Python</option>
+      <option value="C_Programming.html">C Programming</option>
+      <option value="Java.html">Java</option>
+      <option value="JavaScript.html">JavaScript</option>
+      <option value="C++.html">C++</option>
+      <option value="PHP.html">PHP</option>
+      <option value="Ruby.html">Ruby</option>
+      <option value="Swift.html">Swift</option>
+      <option value="Kotlin.html">Kotlin</option>
+      <option value="Go.html">Go</option>
+    </select>
+
+    <!-- Web Development -->
+    <select class="btn">
+      <option selected disabled> Web Development</option>
+      <option value="HTML.html">HTML</option>
+      <option value="CSS.html">CSS</option>
+      <option value="JavaScript.html">JavaScript</option>
+      <option value="React.html">React</option>
+      <option value="NodeJS.html">Node.js</option>
+      <option value="Bootstrap.html">Bootstrap</option>
+      <option value="Tailwind.html">Tailwind CSS</option>
+      <option value="Angular.html">Angular</option>
+      <option value="Vue.html">Vue.js</option>
+      <option value="jQuery.html">jQuery</option>
+    </select>
+
+    <!-- Data Structures -->
+    <select class="btn">
+      <option selected disabled> Data Structures</option>
+      <option value="Array.html">Array</option>
+      <option value="LinkedList.html">Linked List</option>
+      <option value="Stack.html">Stack</option>
+      <option value="Queue.html">Queue</option>
+      <option value="Tree.html">Tree</option>
+      <option value="Graph.html">Graph</option>
+      <option value="Hashing.html">Hashing</option>
+      <option value="Heap.html">Heap</option>
+      <option value="Searching.html">Searching</option>
+      <option value="Sorting.html">Sorting</option>
+    </select>
+
+    <!-- Computer Fundamentals -->
+    <select class="btn">
+      <option selected disabled> Computer Fundamentals</option>
+      <option value="Computer_Basics.html">Computer Basics</option>
+      <option value="Hardware.html">Hardware</option>
+      <option value="Software.html">Software</option>
+      <option value="Operating_System.html">Operating System</option>
+      <option value="Input_Devices.html">Input Devices</option>
+      <option value="Output_Devices.html">Output Devices</option>
+      <option value="Memory.html">Memory</option>
+      <option value="Storage.html">Storage</option>
+      <option value="Binary_System.html">Binary System</option>
+      <option value="Computer_History.html">Computer History</option>
+    </select>
+
+    <!-- Database Topics -->
+    <select class="btn">
+      <option selected disabled> Database Topics</option>
+      <option value="DBMS.html">DBMS</option>
+      <option value="SQL.html">SQL</option>
+      <option value="MySQL.html">MySQL</option>
+      <option value="PostgreSQL.html">PostgreSQL</option>
+      <option value="MongoDB.html">MongoDB</option>
+      <option value="Normalization.html">Normalization</option>
+      <option value="ER_Model.html">ER Model</option>
+      <option value="Joins.html">SQL Joins</option>
+      <option value="Transactions.html">Transactions</option>
+      <option value="Indexes.html">Indexes</option>
+    </select>
+
+    <!-- Networking & Security -->
+    <select class="btn">
+      <option selected disabled> Networking & Security</option>
+      <option value="Computer_Networks.html">Computer Networks</option>
+      <option value="OSI_Model.html">OSI Model</option>
+      <option value="IP_Addressing.html">IP Addressing</option>
+      <option value="Routing.html">Routing</option>
+      <option value="TCP_IP.html">TCP/IP</option>
+      <option value="Firewalls.html">Firewalls</option>
+      <option value="Network_Topology.html">Network Topology</option>
+      <option value="Cyber_Security.html">Cyber Security</option>
+      <option value="Ethical_Hacking.html">Ethical Hacking</option>
+      <option value="Cryptography.html">Cryptography</option>
+    </select>
+  </div>
+</main>
+
+  <div class="hero-main">
+  <section id="journey">
+    <h2>Your Learning Journey Starts Here</h2>
+    <p>Follow the step-by-step path and become a certified expert</p>
+
+    <div class="steps-container">
+      <div class="step-box">
+        <h4>🎯 Course Selection</h4>
+        <p>Pick the right course based on your goals and interests.</p>
+      </div>
+
+      <div class="step-box">
+        <h4>📚 Start Learning</h4>
+        <p>Access lessons anytime, anywhere, at your own pace.</p>
+      </div>
+
+      <div class="step-box">
+        <h4>🛠 Practice & Projects</h4>
+        <p>Work on real-world projects to build your confidence.</p>
+      </div>
+
+      <div class="step-box">
+        <h4>📜 Get Certified</h4>
+        <p>Earn a verified certificate to showcase your skills.</p>
+      </div>
+
+      <div class="step-box">
+        <h4>🚀 Launch Your Career</h4>
+        <p>Apply for jobs or start freelancing with confidence.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="hero-main">
+  <section class="hero">
+    <div class="slider-wrapper">
+      <div class="hero">
+
+        <div class="hero-card">
+          <img src="ai1.jpg" alt="">
+          <h3>Artificial Intelligence</h3>
+          <p>Learn how machines can simulate human intelligence.</p>
+        </div>
+
+        <div class="hero-card">
+          <img src="c.jpg" alt="">
+          <h3>C Programming</h3>
+          <p>Master the basics of programming using the C language.</p>
+        </div>
+
+        <div class="hero-card">
+          <img src="coding_dev.jpg" alt="">
+          <h3>Full Stack Development</h3>
+          <p>Build complete websites using front-end and back-end skills.</p>
+        </div>
+
+        <div class="hero-card">
+          <img src="dbms.jpg" alt="">
+          <h3>Database Management System</h3>
+          <p>Learn how to store and manage data efficiently.</p>
+        </div>
+
+        <div class="hero-card">
+          <img src="js2.jpg" alt="">
+          <h3>JavaScript</h3>
+          <p>Enhance your webpages with interactive JavaScript features.</p>
+        </div>
+
+        <div class="hero-card">
+          <img src="nextjs2.jpg" alt="">
+          <h3>Next.js Framework</h3>
+          <p>Develop fast and scalable web apps with Next.js framework.</p>
+        </div>
+
+        <div class="hero-card">
+          <img src="php.jpg" alt="">
+          <h3>PHP Programming</h3>
+          <p>Create dynamic web applications using PHP scripting.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+  <div class="hero-main">
+  <section class="hero">
+    <div class="slider-wrapper">
+      <div class="hero">
+
+        <div class="hero-card">
+          <img src="python5.jpg" alt="">
+          <h3>Python Programming</h3>
+          <p>Learn penetration testing and cybersecurity skills legally.</p>
+        </div>
+
+        <div class="hero-card">
+          <img src="c++2.jpg" alt="">
+          <h3>C++ Programming</h3>
+          <p>Automate development, testing, and deployment using tools like Docker and Jenkins.</p>
+        </div>
+
+        <div class="hero-card">
+          <img src="reactjs1.jpg" alt="">
+          <h3>React.js Development</h3>
+          <p>Understand how to build interactive UIs using React.js framework.</p>
+        </div>
+
+        <div class="hero-card">
+          <img src="software_eng.jpg" alt="">
+          <h3>Software Engineering</h3>
+          <p>Design and build 2D/3D games using Unity or Unreal Engine.</p>
+        </div>
+
+        <div class="hero-card">
+          <img src="sql.jpg" alt="">
+          <h3>SQL & Database</h3>
+          <p>Use SQL and Microsoft Excel for advanced data analysis and visualization.</p>
+        </div>
+
+        <div class="hero-card">
+          <img src="webdesign.jpg" alt="">
+          <h3>Web Design</h3>
+          <p>Master Photoshop, Illustrator, and design principles for visual content.</p>
+        </div>
+
+        <div class="hero-card">
+          <img src="ai1.jpg" alt="">
+          <h3>Artificial Intelligence</h3>
+          <p>Promote brands using SEO, social media, email, and more.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+
+  <br>
+  <div class="hero-main">
+  <div class="body-hero">
+    <div class="hero-left">
+      <img src="man1.jpg" alt="Profile of Mr. Leonardo">
+      <h3>Mr. Leonardo</h3>
+      <ul id="navber">
+        <li>
+          <a href="home.html"><i class="fa-solid fa-user-group"></i><span>Followers</span></a>
+          <p><b>19.3K</b></p>
+        </li>
+        <li>
+          <a href="home.html"><i class="fa-solid fa-user-check"></i><span>Following</span></a>
+          <p><b>162</b></p>
+        </li>
+        <li>
+          <a href="search/search.html"><i class="fa-solid fa-calendar-days"></i><span>Joining Date</span></a>
+          <p>Feb 2022</p>
+        </li>
+      </ul>
+      <button class="btn-main-hero">Start Following</button>
+    </div>
+
+    <div class="hero-right">
+      <div class="body-right">
+        <div class="right-img"><img src="woman1.jpg" alt="Emma Watson"></div>
+        <div class="right-text">
+          <h3>Emma Watson</h3>
+          <p>@emmawatson</p>
+        </div>
+        <button class="right-btn1">Following</button>
+      </div>
+
+      <div class="body-right">
+        <div class="right-img"><img src="man2.jpg" alt="Chris Evans"></div>
+        <div class="right-text">
+          <h3>Chris Evans</h3>
+          <p>@chrisevans</p>
+        </div>
+        <button class="right-btn2">Follow</button>
+      </div>
+
+      <div class="body-right">
+        <div class="right-img"><img src="man4.jpg" alt="Zendaya"></div>
+        <div class="right-text">
+          <h3>Zendaya</h3>
+          <p>@zendaya</p>
+        </div>
+        <button class="right-btn1">Following</button>
+      </div>
+
+      <div class="body-right">
+        <div class="right-img"><img src="woman2.jpg" alt="Robert Downey Jr."></div>
+        <div class="right-text">
+          <h3>Robert Downey Jr.</h3>
+          <p>@ironman</p>
+        </div>
+        <button class="right-btn2">Follow</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <br>
+  <div class="food-main">
+  <footer id="foot">
+    <!-- Logo and About -->
+    <div class="footer-section logo-section">
+      <img src="logo.jpg" alt="Logo" />
+      <h1>Learn online</h1>
+      <p>
+        Empowering learners globally with flexible online courses.<br>
+        Join thousands of students and upskill your future!
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p><a href="mailto:support@example.com">support@example.com</a></p>
+      <p><a href="mailto:info@example.com">info@example.com</a></p>
+      <p><a href="mailto:career@example.com">career@example.com</a></p>
+      <p><a href="mailto:media@example.com">media@example.com</a></p>
+    </div>
+
+    <!-- Legal Links -->
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <p><a href="#">Privacy Policy</a></p>
+      <p><a href="#">Terms of Use</a></p>
+      <p><a href="#">Refund Policy</a></p>
+      <p><a href="#">Accessibility</a></p>
+    </div>
+
+    <!-- Quick Navigation -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <p><a href="#">Courses</a></p>
+      <p><a href="#">Blog</a></p>
+      <p><a href="#">About Us</a></p>
+      <p><a href="#">Help Center</a></p>
+    </div>
+
+  </footer>
+</div>
+</body>
+</html>

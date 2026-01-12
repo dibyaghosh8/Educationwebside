@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Bot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    body {
+      background-color: rgb(227, 240, 245);
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    .hero {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      width: 500px;
+      height: 600px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .top {
+      background-color: blue;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+    }
+
+    .top h2 {
+      margin: 0;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .bottom {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .bottom-btn1,
+    .bottom-btn2 {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 20px;
+      border: none;
+      margin-bottom: 10px;
+      font-size: 16px;
+      max-width: 80%;
+      word-wrap: break-word;
+    }
+
+    .bottom-btn1 {
+      background-color: #e0e0e0;
+      text-align: left;
+    }
+
+    .bottom-btn2 {
+      background-color: #d1e7dd;
+      float: right;
+      text-align: right;
+    }
+
+    .end {
+      display: flex;
+      padding: 15px;
+      border-top: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+
+    .end input {
+      flex: 1;
+      padding: 12px 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      outline: none;
+    }
+
+    .end-btn {
+      width: 50px;
+      height: 45px;
+      margin-left: 10px;
+      border-radius: 50%;
+      background-color: #007bff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .end-btn::after {
+      content: '➤';
+      color: white;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero">
+    <div class="top">
+      <h2>🤖 CHATBOT ASSISTANT</h2>
+      <a href="file:///C:/Users/Dibya/Desktop/webside/home.html" class="close-btn"><i class="fa-solid fa-xmark"></i></a>
+    </div>
+    <div class="bottom">
+      <button class="bottom-btn1">👋 Hello! How can I help you today?</button><br><br>
+      <button class="bottom-btn2">What is BCA?</button><br><br>
+      <button class="bottom-btn1">BCA stands for Bachelor of Computer Applications.</button>
+    </div>
+    <div class="end">
+      <input type="text" placeholder="Type your message..." />
+      <button class="end-btn"></button>
+    </div>
+  </div>
+</body>
+
+</html>

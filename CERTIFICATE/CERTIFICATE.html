@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #0e6164;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .navbar h1 {
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #aafff0;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #0e6164, #3bb9b5);
+            color: white;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .logo-circle-section {
+            text-align: center;
+            padding: 30px;
+            background-color: #e2f7f6;
+        }
+
+        .logo-circle-section h2 {
+            margin-bottom: 20px;
+            color: #0e6164;
+        }
+
+        .circle-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .circle-logos img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #0e6164;
+            padding: 5px;
+            background-color: white;
+            transition: transform 0.3s;
+        }
+
+        .circle-logos img:hover {
+            transform: scale(1.1);
+        }
+
+        .certificate-container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .certificate-container img {
+            width: 40%;
+            max-width: 500px;
+            border: 10px solid #ccc;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .download-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .download-button a {
+            background-color: #0e6164;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button a:hover {
+            background-color: #084a4c;
+        }
+
+        .about {
+            padding: 40px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #0e6164;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 16px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #0e6164;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body> 
+    <div class="navbar">
+        <h1>learn Online</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Certificates</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div> 
+    
+    <div class="hero">
+        <h2>GET CERTIFICATE ONLINE</h2>
+        <p>Complete courses and earn verified certificates from leading organizations.</p>
+    </div>
+
+    <div class="logo-circle-section">
+        <h2>Our Accrediting Partners</h2>
+        <div class="circle-logos">
+            <img src="ict.jpg" alt="ICT Division" />
+            <img src="google.jpg" alt="Google" />
+            <img src="ms.jpg" alt="Microsoft" />
+            <img src="nsdc.jpg" alt="NSDC" />
+            <img src="tcs.jpg" alt="TCS" />
+            <img src="sikill_india.jpg" alt="Skill India" />
+        </div>
+    </div> 
+
+    <div class="certificate-container">
+        <img src="c2.jpg" alt="Certificate" />
+        <img src="c1.jpg" alt="Certificate" />
+        <div class="download-button">
+            <a href="downloads/certificate.pdf" download>Download Certificate</a>
+        </div>
+    </div> 
+
+    <div class="about">
+        <h2>Why learn online?</h2>
+        <p>learn online is an online educational platform offering free and paid courses with certification. Our mission
+            is to empower students and professionals by validating their skills and achievements through
+            industry-recognized certificates.</p>
+    </div> <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 learn online</p>
+        <p>Email: support@learnonline.com | Contact: +91 98765 43210</p>
+    </footer>
+</body>
+
+</html>
